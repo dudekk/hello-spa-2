@@ -33,8 +33,10 @@ Run `vagrant up` to start virtual machine which [Vagrant](https://vagrantup.com)
 
 Before execution you should consider changing values of available resources for virtual machine. Default value (1GB) can be not enough to successfully build Docker image.
 
-```v.memory = 4096
-    v.cpus = 2```
+```
+v.memory = 4096
+v.cpus = 2
+```
 
 After successful build you should see following terminal output:
 
