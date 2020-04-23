@@ -8,6 +8,8 @@ services:
 before_install:
   - docker build . --file docker/Dockerfile --tag hello-spa
 
+script: 'true'
+
 deploy:
   provider: script
   script: bash travis_docker_push
