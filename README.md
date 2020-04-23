@@ -31,19 +31,21 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 Run `vagrant up` to start virtual machine which [Vagrant](https://vagrantup.com) will automatically provision building Docker image. You should see the output from the shell script appear in your terminal.
 
-Before execution you should consider changing values of available resources for virtual machine. Default value (1GB) can be not enough to successfully build Docker image.
+Before execution you should consider changing values of available resources for virtual machine corresponding your hardware resources.
 
 ```
 v.memory = 4096
 v.cpus = 2
 ```
 
-After successful build you should see following terminal output:
+After successful execution you should see following terminal output:
 
-```==> default: Successfully built a9b73fa5d5e6
-==> default: Successfully tagged hello-spa:latest
+```==> default: Mounting shared folders...
+    default: /vagrant => /root/sant-travis/hello-spa-2-master
+==> default: Running provisioner: docker...
+    default: Installing Docker onto machine...
 ==> default: Starting Docker containers...
-==> default: -- Container: hello-spa
+==> default: -- Container: dudekk/hello-spa
 ```
 
 Vagrantfile is configured using port-forward to allow connecting to the web server so you should be able to access it from the host machine on port 8081 `localhost:8081` 
