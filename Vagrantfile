@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "docker" do |docker|
     docker.run "dudekk/hello-spa",
-      image: "dudekk-hello-spa",
+      image: "dudekk/hello-spa",
       args: "-p 80:80"
   end
 end
